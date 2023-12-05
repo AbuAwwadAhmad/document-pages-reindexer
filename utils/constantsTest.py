@@ -1,0 +1,15 @@
+QUEUE_URL = 'dev-document-indexer'
+REGION_NAME = 'us-east-1'
+OPEN_SEARCH_HOST = 'search-dev-tucxk6ki5he64uzgxrliznkdny.us-east-1.es.amazonaws.com:443'
+OPEN_SEARCH_USERNAME = 'username'
+OPEN_SEARCH_PASSWORD = 'password'
+OPEN_SEARCH_SECRET = 'dev/elasticsearch'
+S3_BUCKET = 'dev-quizplus-documents'
+
+MYSQL_HOST = 'host'
+MYSQL_USER = 'username'
+MYSQL_PASSWORD = 'password'
+MYSQL_DATABASE = 'content_schema'
+MYSQL_SECRET = 'dev/db'
+
+index_name = 'document_page'
