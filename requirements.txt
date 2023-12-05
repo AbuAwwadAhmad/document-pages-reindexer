@@ -1,8 +1,0 @@
-PyMuPDF==1.23.3
-python-docx==0.8.11
-opensearch-py==1.1.0
-requests==2.28.2
-boto3==1.28.38
-botocore==1.31.38
-docx2pdf==0.1.8
-PyMySQL==1.1.0
