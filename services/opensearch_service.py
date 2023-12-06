@@ -34,10 +34,8 @@ def index_to_opensearch(data, pages_data):
                     continue_var = False
                     break
 
-            if continue_var:
-                continue
-
-            if text is None or text == '':
+            if text is None or text == '' or continue_var:
+                i = i + 1
                 continue
 
             document_id = pages[i]['id']
@@ -68,6 +66,7 @@ def index_to_opensearch(data, pages_data):
                 },
                 'page_number': page_number,
                 'page_name': pages[i]['name'],
+                'thumnail': pages[i]['name'],
                 'page_slug': str(document_id) + '-' + pages[i]['slug'],
                 'id': document_id
             }
