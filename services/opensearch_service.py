@@ -66,7 +66,7 @@ def index_to_opensearch(data, pages_data):
                 },
                 'page_number': page_number,
                 'page_name': pages[i]['name'],
-                'thumnail': pages[i]['name'],
+                'thumbnail': pages[i]['thumbnail'],
                 'page_slug': str(document_id) + '-' + pages[i]['slug'],
                 'id': document_id
             }
