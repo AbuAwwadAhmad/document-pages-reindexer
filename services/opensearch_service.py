@@ -52,7 +52,6 @@ def index_to_opensearch(data, pages_data):
                     'type': 'OTHERS' if data['file_type'] is None else data['file_type'],
                     'id': data['id'],
                     'user_id': data['user_id'],
-                    'thumbnail': data['thumbnail'],
                 },
                 'course': {
                     'id': data['uc.id'],
