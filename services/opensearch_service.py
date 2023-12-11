@@ -49,7 +49,7 @@ def index_to_opensearch(data, pages_data):
                     'name': data['name'],
                     'url': data['url'],
                     'extension': data['extension'],
-                    'type': 'OTHERS' if data['file_type'] is None else data['file_type'],
+                    'type': 'OTHER' if data['file_type'] is None else data['file_type'],
                     'id': data['id'],
                     'user_id': data['user_id'],
                 },
@@ -65,7 +65,7 @@ def index_to_opensearch(data, pages_data):
                 },
                 'page_number': page_number,
                 'page_name': pages[i]['name'],
-                'page_thumbnail': pages[i]['thumbnail'],
+                'page_thumbnail': pages[i]['thumbnail_uri'],
                 'page_slug': str(document_id) + '-' + pages[i]['slug'],
                 'id': document_id
             }
