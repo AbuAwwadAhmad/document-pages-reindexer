@@ -21,11 +21,11 @@ def get_approved_documents():
     cursor = connection.cursor()
 
     try:
-        query = "SELECT f.id, f.name, f.thumbnail, f.url, f.user_id, f.extension, f.file_type, " \
+        query = "SELECT f.id, f.name,  f.url, f.user_id, f.extension, f.file_type, f.pages_count, " \
                 "uc.title, uc.id, uc.shorten_title, u.id, u.name, u.shorten_name, " \
                 "       CONCAT('[', GROUP_CONCAT( " \
-                "JSON_OBJECT('id', fp.id, 'slug', fp.slug, 'name', fp.name, 'page_number', fp.page_number) " \
-                "        ), ']') as pages " \
+                "JSON_OBJECT('id', fp.id, 'slug', fp.slug, 'name', fp.name, 'page_number', fp.page_number," \
+                "'thumbnail_uri', fp.thumbnail_uri) ), ']') as pages " \
                 "FROM file f " \
                 "LEFT JOIN file_page fp on f.id = fp.file_id " \
                 "LEFT JOIN university_course_files ucf on f.id = ucf.file_id " \
