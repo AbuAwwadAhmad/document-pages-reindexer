@@ -34,6 +34,7 @@ def get_approved_documents():
                 "WHERE f.status = 'APPROVED' " \
                 "   AND f.deleted = 0 " \
                 "   AND f.extension in ('pdf', 'docx') " \
+                "    AND f.created_at > '2023-08-01 14:31:26' " \
                 "GROUP BY f.id " \
                 "ORDER BY f.id DESC "
         cursor.execute(query)
