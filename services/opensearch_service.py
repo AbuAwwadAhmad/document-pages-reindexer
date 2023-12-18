@@ -45,7 +45,8 @@ def index_to_opensearch(data, pages_data):
             document_body = {
                 'document_id': document_id,
                 'file': {
-                    'inner_text': text.replace('\n', ' ').replace('\t', ' ').replace('\r', ' '),
+                    'inner_text': text.replace('\n', ' ').replace('\t', ' ').replace('\r', ' ')
+                                .replace('', ' ').replace('', ' '),
                     'name': data['name'],
                     'url': data['url'],
                     'extension': data['extension'],
