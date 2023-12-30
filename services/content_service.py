@@ -36,6 +36,7 @@ def get_approved_documents():
                    AND f.deleted = 0 
                    AND f.extension in ('pdf', 'docx') 
                     AND f.created_at > '2023-08-01 14:31:26' 
+                    AND f.processing_status > 'COMPLETED' 
                 GROUP BY f.id 
                 ORDER BY f.id DESC """
         cursor.execute(query)
