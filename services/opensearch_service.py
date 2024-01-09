@@ -38,6 +38,9 @@ def index_to_opensearch(data, pages_data):
                 i = i + 1
                 continue
 
+            if page_number == 1:
+                text = data['name'] + ' ' + text
+
             document_id = pages[i]['id']
 
             print(f'Page Number: {page_number}, Document ID: {document_id}')
@@ -51,7 +54,6 @@ def index_to_opensearch(data, pages_data):
                     'type': 'OTHER' if data['file_type'] is None else data['file_type'],
                     'id': data['id'],
                     'user_id': data['user_id'],
-                    'color': data['file_color'],
                 },
                 'course': {
                     'id': data['uc.id'],

@@ -19,7 +19,7 @@ def process_document(s3_file_url, file_id, file_name):
     if s3_file_url.lower().endswith('.pdf'):
         processed_data = process_pdf(pdf_path=local_file_path, file_id=file_id)
     elif s3_file_url.lower().endswith('.docx'):
-        file_utils.convert_docx_to_pdf(local_file_path)
+        file_utils.convert_docx_to_pdf_windows(local_file_path)
         local_file_path = file_utils.change_extension_to_pdf(local_file_path)
         processed_data = process_pdf(pdf_path=local_file_path, file_id=file_id)
     else:
